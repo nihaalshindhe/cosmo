@@ -4,7 +4,7 @@ export default function Search({ setData }) {
     const [text, setText] = useState('')
 
     const handleSearch = async () => {
-        const res = await fetch(`http://localhost:4000/search?concern=${text}`)
+        const res = await fetch(`https://cosmo1.onrender.com/search?concern=${text}`)
         const json = await res.json()
         setData(json)
     }
